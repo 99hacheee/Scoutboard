@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/375bc5705f.js"
+      crossorigin="anonymous"></script>
+    <title>Scout Board</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <!-- END Bootstrap -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- END Custom CSS -->
+  </head>
+  <body>
+    <section class="sect_nav">
+      <div class="cont_nav nav_partido">
+        <div class="cont_logo cont_nav__logo">
+          <a href="./index.html"
+            ><img src="./imagenes/logo-scout-board.svg" alt="Scout Board Logo"
+          /></a>
+        </div>
+        <div class="cont_nav__btn">
+          <!-- <button
+        class="cont_btn__1 btn_partido"
+        onclick="navigateTo('index.html')">
+        Home
+      </button> -->
+          <button
+            class="cont_btn__4 btn_partido"
+            onclick="irASiguientePantalla()">
+            Pizarra
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="sect_partido">
+      <div class="cont_buttons">
+        <div class="cont_buttons__remates">
+          <button type="button" id="" class="remates_rojo">=</button>
+          <button type="button" id="" class="remates_verde">#</button>
+          <button type="button" id="" class="remates_amarillo">/</button>
+        </div>
+        <div class="cont_buttons__jugadores">
+          <div class="campo_buttons_superior">
+            <button
+              type="button"
+              id="rotacion"
+              class="btn btn-outline-light rotacion btn-lg">
+              <i class="fa-solid fa-rotate"></i> Cambiar jugador
+            </button>
+          </div>
+          <div class="jugadores_seisInicial">
+            <p class="seisInicial_titulo">Jugadores</p>
+            <div class="list-group jugadores_list">
+              <button
+                id="botonJugador1"
+                type="button"
+                class="list-group-item list-group-item-action"
+                aria-current="true">
+                <div class="d-flex gap-3">
+                  <span class="text-dark fw-bold">14</span>
+                  <p>A list item</p>
+                </div>
+              </button>
+              <button
+                id="botonJugador2"
+                type="button"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex gap-3">
+                  <span class="text-dark fw-bold">14</span>
+                  <p>A list item</p>
+                </div>
+              </button>
+              <button
+                id="botonJugador3"
+                type="button"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex gap-3">
+                  <span class="text-dark fw-bold">14</span>
+                  <p>A list item</p>
+                </div>
+              </button>
+              <button
+                id="botonJugador4"
+                type="button"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex gap-3">
+                  <span class="text-dark fw-bold">14</span>
+                  <p>A list item</p>
+                </div>
+              </button>
+              <button
+                id="botonJugador5"
+                type="button"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex gap-3">
+                  <span class="text-dark fw-bold">14</span>
+                  <p>A list item</p>
+                </div>
+              </button>
+              <button
+                id="botonJugador6"
+                type="button"
+                class="list-group-item list-group-item-action">
+                <div class="d-flex gap-3">
+                  <span class="text-dark fw-bold">14</span>
+                  <p>A list item</p>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="jugadores_suplentes">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <p class="accordion-header suplentes_titulo">
+                  <button
+                    class="btn_suplentes_titulo accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne"
+                    aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Suplentes
+                  </button>
+                </p>
+                <div
+                  id="panelsStayOpen-collapseOne"
+                  class="accordion-collapse collapse list-group jugadores_list">
+                  <button
+                    id="botonSuplente1"
+                    type="button"
+                    class="list-group-item list-group-item-action"
+                    aria-current="true">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente2"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente3"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente4"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente5"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente6"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente7"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                  <button
+                    id="botonSuplente8"
+                    type="button"
+                    class="list-group-item list-group-item-action">
+                    <div class="d-flex gap-3">
+                      <span class="text-dark fw-bold">14</span>
+                      <p>A list item</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cont_campo">
+        <div class="campo_mitades">
+          <div class="mitad1">
+            <table class="mitad1_saque">
+              <tbody>
+                <tr class="btn-fuera-sp">
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><button id="zonaCampo10" class="s5">S5</button></td>
+                </tr>
+                <tr>
+                  <td><button id="zonaCampo11" class="s6">S6</button></td>
+                </tr>
+                <tr>
+                  <td><button id="zonaCampo12" class="s9">S1</button></td>
+                </tr>
+                <tr class="btn-fuera-sp">
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="mitad1_zonas">
+              <tbody>
+                <tr class="btn-fuera-sp">
+                  <td colspan="3"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <button id="zonaCampo5" class="z5">5</button>
+                  </td>
+                  <td>
+                    <button id="zonaCampo9" class="z9">9</button>
+                  </td>
+                  <td>
+                    <button id="zonaCampo4" class="z4">4</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button id="zonaCampo6" class="z6">6</button>
+                  </td>
+                  <td>
+                    <button id="zonaCampo8" class="z8">8</button>
+                  </td>
+                  <td>
+                    <button id="zonaCampo3" class="z3">3</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button id="zonaCampo1" class="z1">1</button>
+                  </td>
+                  <td>
+                    <button id="zonaCampo7" class="z7">7</button>
+                  </td>
+                  <td>
+                    <button id="zonaCampo2" class="z2">2</button>
+                  </td>
+                </tr>
+                <tr class="btn-fuera-sp">
+                  <td colspan="3"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mitad_linea">
+            <div class="c1"></div>
+            <div class="linea"></div>
+            <div class="c2"></div>
+          </div>
+          <div class="mitad2">
+            <table class="mitad2_zonas">
+              <tbody>
+                <tr class="btn-fuera">
+                  <td colspan="4">
+                    <button id="out10" class="fuera r1">OUT</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button id="zonaAtaque2" class="r2">Z2</button>
+                  </td>
+                  <td>
+                    <button id="zonaAtaque7" class="r7">Z7</button>
+                  </td>
+                  <td>
+                    <button id="zonaAtaque1" class="r1">Z1</button>
+                  </td>
+                  <td rowspan="3" class="btn-fuera-v">
+                    <button id="out11" class="fuera_v">O<br />U<br />T</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button id="zonaAtaque3" class="r3">Z3</button>
+                  </td>
+                  <td>
+                    <button id="zonaAtaque8" class="r8">Z8</button>
+                  </td>
+                  <td>
+                    <button id="zonaAtaque6" class="r6">Z6</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button id="zonaAtaque4" class="r4">Z4</button>
+                  </td>
+                  <td>
+                    <button id="zonaAtaque9" class="r9">Z9</button>
+                  </td>
+                  <td>
+                    <button id="zonaAtaque5" class="r5">Z5</button>
+                  </td>
+                </tr>
+                <tr class="btn-fuera">
+                  <td colspan="4">
+                    <button id="out12" class="fuera r2">OUT</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="campo_buttons__inferior">
+          <button
+            class="cont_btn__3 btn_partido"
+            data-bs-toggle="modal"
+            data-bs-target="#statsJugModal">
+            Estadísticas por jugador
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="statsJugModal"
+            tabindex="-1"
+            aria-labelledby="statsJugModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="statsJugModalLabel">
+                    Estadísticas por jugador
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Equipo</th>
+                        <th scope="col">=</th>
+                        <th scope="col">/</th>
+                        <th scope="col">#</th>
+                        <th scope="col">#%</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">TOTAL</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="accordion" id="accordionPanelsStayOpen">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="nombreJugador1">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#panelsStayOpen-collapseOne"
+                          aria-expanded="true"
+                          aria-controls="panelsStayOpen-collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div
+                        id="panelsStayOpen-collapseOne"
+                        class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"></th>
+                                <th scope="col">=</th>
+                                <th scope="col">/</th>
+                                <th scope="col">#</th>
+                                <th scope="col">#%</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" data-zona="Zona de saque 1">
+                                  Zona de saque 1
+                                </th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona de saque 5">
+                                  Zona de saque 5
+                                </th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona de saque 6">
+                                  Zona de saque 6
+                                </th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 1">Zona 1</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 2">Zona 2</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 3">Zona 3</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 4">Zona 4</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 5">Zona 5</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 6">Zona 6</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 7">Zona 7</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 8">Zona 8</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr>
+                                <th scope="row" data-zona="Zona 9">Zona 9</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                              <tr data-zona="TOTAL">
+                                <th scope="row">TOTAL</th>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="cont_btn__3 btn_partido"
+            data-bs-toggle="modal"
+            data-bs-target="#statsModal"
+            onclick="estadisticas()">
+            Estadísticas
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="statsModal"
+            tabindex="-1"
+            aria-labelledby="statsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="statsModalLabel">
+                    Estadísticas
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">EQUIPO</th>
+                        <th scope="col">=</th>
+                        <th scope="col">/</th>
+                        <th scope="col">#</th>
+                        <th scope="col">#%</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr data-zona="zona saque 1">
+                      <th scope="row">Zona de saque 1</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona saque 5">
+                      <th scope="row">Zona de saque 5</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-saque-6">
+                      <th scope="row">Zona de saque 6</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-1">
+                      <th scope="row">Zona 1</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-2">
+                      <th scope="row">Zona 2</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-3">
+                      <th scope="row">Zona 3</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-4">
+                      <th scope="row">Zona 4</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-5">
+                      <th scope="row">Zona 5</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-6">
+                      <th scope="row">Zona 6</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-7">
+                      <th scope="row">Zona 7</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-8">
+                      <th scope="row">Zona 8</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr data-zona="zona-9">
+                      <th scope="row">Zona 9</th>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                      <tr
+                              data-zona="total">
+                        <th scope="row" >TOTAL</th>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="cont_btn__1 btn_partido"
+            onclick="navigateTo('index.html')">
+            Finalizar partido
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="js/zonas.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/partido.js"></script>
+    <script src="js/estadisticasZona.js"></script>
+    <script src="js/estadisticasJugadores.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/accion.js"></script>
+  </body>
+</html>
